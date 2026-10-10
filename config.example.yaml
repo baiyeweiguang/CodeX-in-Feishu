@@ -1,0 +1,26 @@
+dataDir: .local/data
+timezone: Asia/Shanghai
+feishu:
+  allowedOpenIds: []
+  groupsEnabled: false
+  allowedChatIds: []
+codex:
+  executable: codex
+  expectedVersion: 0.144.1
+  requestTimeoutMs: 30000
+  idleProcessMinutes: 15
+scheduler:
+  globalConcurrency: 2
+  interactionTimeoutMinutes: 30
+files:
+  maxBytes: 20971520
+  maxArtifactsPerTask: 10
+  maxStorageBytes: 1073741824
+  retentionDays: 7
+projects:
+  - id: connector
+    alias: connector
+    root: .
+    sandbox: workspace-write
+    approvalsReviewer: user
+    autoSendExports: false

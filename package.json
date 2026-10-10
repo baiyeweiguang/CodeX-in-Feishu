@@ -1,0 +1,33 @@
+{
+  "name": "codex-connector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "start": "node --disable-warning=ExperimentalWarning dist/src/main.js run",
+    "dev": "tsx src/main.ts run",
+    "doctor": "tsx src/main.ts doctor",
+    "pair": "tsx src/main.ts pair",
+    "test": "vitest run",
+    "check": "tsc --noEmit",
+    "test:live": "tsx scripts/smoke-codex.ts"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.0.0",
+    "ajv": "^8.20.0",
+    "dotenv": "^17.2.3",
+    "pino": "^10.1.0",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
